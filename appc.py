@@ -44,13 +44,13 @@ def main():
     st.title('Crop Recommendation System')
 
     # Collect user inputs
-    N = st.number_input("Enter the value for Nitrogen (N)", min_value=0.0, max_value=100.0, step=0.1)
-    P = st.number_input("Enter the value for Phosphorus (P)", min_value=0.0, max_value=100.0, step=0.1)
-    K = st.number_input("Enter the value for Potassium (K)", min_value=0.0, max_value=100.0, step=0.1)
-    temperature = st.number_input("Enter the temperature in Celsius", min_value=-50.0, max_value=50.0, step=0.1)
-    humidity = st.number_input("Enter the humidity percentage", min_value=0.0, max_value=100.0, step=0.1)
-    ph = st.number_input("Enter the soil pH value", min_value=0.0, max_value=14.0, step=0.1)
-    rainfall = st.number_input("Enter the rainfall in mm", min_value=0.0, max_value=1000.0, step=0.1)
+    N = st.number_input("Enter the value for Nitrogen (N)", min_value=0.0, max_value=100.0, step=0.1,value=50.0)
+    P = st.number_input("Enter the value for Phosphorus (P)", min_value=0.0, max_value=100.0, step=0.1,value=50.0)
+    K = st.number_input("Enter the value for Potassium (K)", min_value=0.0, max_value=100.0, step=0.1,value=50.0)
+    temperature = st.number_input("Enter the temperature in Celsius", min_value=10.0, max_value=50.0, step=0.1,value=25.0)
+    humidity = st.number_input("Enter the humidity percentage", min_value=0.0, max_value=100.0, step=0.1,value=50.0)
+    ph = st.number_input("Enter the soil pH value", min_value=0.0, max_value=14.0, step=0.1,value=7.0)
+    rainfall = st.number_input("Enter the rainfall in mm", min_value=0.0, max_value=1000.0, step=0.1,value=200.0)
 
     # When the user clicks the button
     if st.button('Predict'):
