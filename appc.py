@@ -64,7 +64,7 @@ def main():
 
     # Disable the Predict button if any input is invalid
     if not all_inputs_valid:
-        st.warning("Please ensure all inputs are within the correct range before predicting.")
+        st.warning("Please ensure all inputs are within the correct range.")
 
     # Predict button is disabled until all inputs are valid
     predict_button = st.button('Predict', disabled=not all_inputs_valid)
